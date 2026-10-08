@@ -1,0 +1,53 @@
+{
+    "name":  "quan-ly-nhan-vien",
+    "version":  "0.1.0",
+    "private":  true,
+    "scripts":  {
+                    "dev":  "next dev",
+                    "graphql":  "postgraphile --config graphile.config.mjs",
+                    "dev:all":  "npm run build:nest \u0026\u0026 npm run build:producer \u0026\u0026 node ../backend/scripts/dev-all.mjs",
+                    "build:nest":  "tsc -p ../backend/tsconfig.json",
+                    "build:producer":  "tsc -p ../producer-api/tsconfig.json",
+                    "dev:producer":  "node ../producer-api/dist/index.js",
+                    "start:nest":  "node ../backend/dist-nest/src/main.js",
+                    "db:migrate":  "sequelize-cli db:migrate --config ../backend/config/config.json --migrations-path ../backend/migrations --env development",
+                    "build":  "next build",
+                    "start":  "next start",
+                    "lint":  "eslint",
+                    "rabbitmq:up":  "docker compose -f ../docker-compose.yml up -d rabbitmq",
+                    "rabbitmq:down":  "docker compose -f ../docker-compose.yml down"
+                },
+    "dependencies":  {
+                         "@elysiajs/node":  "^1.4.5",
+                         "@nestjs/common":  "^11.2.6",
+                         "@nestjs/core":  "^11.2.6",
+                         "@nestjs/platform-express":  "^11.2.6",
+                         "@types/amqplib":  "^0.10.8",
+                         "amqplib":  "^0.10.9",
+                         "class-transformer":  "^0.5.1",
+                         "class-validator":  "^0.15.1",
+                         "elysia":  "^1.4.30",
+                         "next":  "16.3.4",
+                         "pg":  "^8.23.0",
+                         "pg-hstore":  "^2.3.4",
+                         "postgraphile":  "^5.1.5",
+                         "react":  "19.2.8",
+                         "react-dom":  "19.2.8",
+                         "reflect-metadata":  "^0.2.2",
+                         "rxjs":  "^7.8.2",
+                         "sequelize":  "^6.37.8",
+                         "xlsx":  "^0.18.5",
+                         "zod":  "^4.6.5"
+                     },
+    "devDependencies":  {
+                            "@tailwindcss/postcss":  "^4",
+                            "@types/node":  "^20",
+                            "@types/react":  "^19",
+                            "@types/react-dom":  "^19",
+                            "eslint":  "^9",
+                            "eslint-config-next":  "16.3.4",
+                            "sequelize-cli":  "^6.6.5",
+                            "tailwindcss":  "^4",
+                            "typescript":  "^5"
+                        }
+}

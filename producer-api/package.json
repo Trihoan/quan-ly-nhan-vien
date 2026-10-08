@@ -1,0 +1,20 @@
+{
+  "name": "employee-import-producer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@elysiajs/node": "^1.4.5",
+    "amqplib": "^0.10.9",
+    "elysia": "^1.4.30",
+    "quan-ly-nhan-vien": "file:../frontend"
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/node": "^20",
+    "typescript": "^5"
+  }
+}

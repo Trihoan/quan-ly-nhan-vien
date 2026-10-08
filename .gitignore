@@ -19,6 +19,9 @@
 
 # production
 /build
+/dist-nest/
+/backend/dist-nest/
+/producer-api/dist/
 
 # misc
 .DS_Store
@@ -39,3 +42,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+node_modules
+
+node_modules/
+frontend/.next/
+dist/
+.env

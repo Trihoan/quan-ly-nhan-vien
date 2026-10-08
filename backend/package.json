@@ -1,0 +1,48 @@
+{
+  "name": "quan-ly-nhan-vien",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix frontend run dev",
+    "dev:all": "npm --prefix frontend run dev:all",
+    "build": "npm --prefix frontend run build",
+    "build:nest": "npm --prefix frontend run build:nest",
+    "build:producer": "npm --prefix frontend run build:producer",
+    "db:migrate": "npm --prefix frontend run db:migrate",
+    "rabbitmq:up": "docker compose up -d rabbitmq",
+    "rabbitmq:down": "docker compose stop rabbitmq"
+  },
+  "dependencies": {
+    "@elysiajs/node": "^1.4.5",
+    "@nestjs/common": "^11.2.6",
+    "@nestjs/core": "^11.2.6",
+    "@nestjs/platform-express": "^11.2.6",
+    "@types/amqplib": "^0.10.8",
+    "amqplib": "^0.10.9",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "elysia": "^1.4.30",
+    "next": "16.3.4",
+    "pg": "^8.23.0",
+    "pg-hstore": "^2.3.4",
+    "postgraphile": "^5.1.5",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.2",
+    "sequelize": "^6.37.8",
+    "xlsx": "^0.18.5",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.4",
+    "sequelize-cli": "^6.6.5",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
